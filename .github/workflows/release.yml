@@ -35,8 +35,7 @@ jobs:
       - name: Compile Typst document
         run: |
           typst compile exam/main.typ output/exam.pdf --font-path ~/.fontist/fonts
-          typst compile review/main.typ output/review.pdf --font-path ~/.fontist/fonts
-
+      #   typst compile review/main.typ output/review.pdf --font-path ~/.fontist/fonts
       - name: Get current date
         id: date
         run: echo "date=$(TZ='Asia/Shanghai' date +'%Y-%m-%d-%H-%M')" >> $GITHUB_OUTPUT
