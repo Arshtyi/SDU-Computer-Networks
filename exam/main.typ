@@ -3,6 +3,9 @@
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 #import "@preview/fancy-units:0.1.1": add-macros, fancy-units-configure, num, qty, unit
 
+#let paren = paren.with(placeholder: none)
+#let fillin = fillin.with(placeholder: none)
+
 #show: setup.with(
     mode: EXAM,
 )
@@ -35,6 +38,7 @@
 #let MB = unit[MB]
 #let km = unit[km]
 #let mps = unit[m/s]
+
 = 选择+填空
 #question[
     哪些服务需要建立在TCP基础上 #paren[]
@@ -45,10 +49,10 @@
     #choices([发送方], [路由器], [交换机], [接收方])
 ]
 #question[
-    设$"rwnd"=5000 bytes$, $"cwnd"=8000 bytes$,$"RTT"=100 ms$,发送方的满载速率是#paren[]
+    设$"rwnd"=5000 bytes$, $"cwnd"=8000 bytes$,$"RTT"=100 ms$,发送方的满载速率是#fillin[]
 ]
 #question[
-    LAN下#paren[]识别硬件,传输层的#paren[]识别不同的应用进程
+    LAN下链路层使用#paren[]识别硬件,传输层使用#paren[]识别不同的应用进程
     #choices([IP地址], [MAC地址], [端口号], [子网掩码])
 ]
 #question[
@@ -58,15 +62,15 @@
 #question[
     设网络总带宽为$30 Mbps$,一共$10$个用户
     + 如果使用电路交换
-        + $t_1$时刻,若有$4$个活跃用户,其中$1$个用户发送,则该用户的带宽为#paren[]
-        + $t_2$时刻,若有$4$个活跃用户,其中$3$个用户发送,则他们的带宽均为#paren[]
-    + 如果使用分组交换,$t_3$时刻所有用户的发送速率均为#paren[]
+        + $t_1$时刻,若有$4$个活跃用户,其中$1$个用户发送,则该用户的带宽为#fillin[]
+        + $t_2$时刻,若有$4$个活跃用户,其中$3$个用户发送,则他们的带宽均为#fillin[]
+    + 如果使用分组交换,$t_3$时刻用户的发送速率为#fillin[]
 ]
 #question[
-    TCP握手#paren[]次,挥手#paren[]次
+    TCP握手#fillin[]次,挥手#fillin[]次
 ]
 #question[
-    主机地址$173.168.120.16\/27$,子网#paren[]. 设ISP拥有地址块$128.119.40.192\/27$,将其划分为$4$个具有相同数量IP地址的子网,则他们分别为#paren[]#paren[]#paren[]#paren[]
+    主机地址$173.168.120.16 slash 27$,子网#fillin[]. 设ISP拥有地址块$128.119.40.192 slash 27$,将其划分为$4$个具有相同数量IP地址的子网,则他们分别为#fillin[],#fillin[],#fillin[],#fillin[]
 ]
 #question[
     一个具有$20$台主机的LAN,并且呈现典型的突发(大部分时间空闲,少数时间同时发送),则适合使用#paren[]协议
@@ -74,15 +78,15 @@
 ]
 #question[
     在EWMA中,设$"EstimatedRTT"=100ms,alpha=0.125$
-    + $"sampleRTT"_1=120ms$则$"EstimatedRTT"_1$=#paren[]
-    + $"sampleRTT"_2=80ms$则$"EstimatedRTT"_2$=#paren[]
+    + $"sampleRTT"_1=120ms$则$"EstimatedRTT"_1$=#fillin[]
+    + $"sampleRTT"_2=80ms$则$"EstimatedRTT"_2$=#fillin[]
 ]
 #question[
     当某网站因业务发展导致用户访问量激增，源站服务器面临巨大的处理压力和带宽瓶颈时，为了有效减轻源站负载、降低网络延迟并提高全球用户的访问响应速度，最适合采用的技术方案是#paren[]
     #choices([采用轮询机制], [使用CSMA协议], [增大TCP窗口], [部署内容分发网络(CDN)])
 ]
 #question[
-    ARP协议的作用是从#paren[]地址得到#paren[]地址
+    ARP协议的作用是从#fillin[]地址得到#fillin[]地址
 ]
 #question[
     设网络结构如图,其中边权为网络延迟
@@ -98,9 +102,9 @@
     ]
 
     使用距离矢量算法(Bellman-Ford算法更新),初始各节点仅知晓与其邻居的距离
-    + 一轮后,A到D的距离为#paren[]
-    + 收敛后,A到E的距离为#paren[]
-    + 需要#paren[]轮才能收敛
+    + 一轮后,A到D的距离为#fillin[]
+    + 收敛后,A到E的距离为#fillin[]
+    + 需要#fillin[]轮才能收敛
 ]
 = 简答
 #question[
