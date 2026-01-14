@@ -39,7 +39,7 @@
 #let km = unit[km]
 #let mps = unit[m/s]
 
-= 选择+填空
+= 不定项选择
 #question[
     哪些服务需要建立在TCP基础上 #paren[]
     #choices([电子邮件], [Web网页], [网络电话], [文件下载])
@@ -49,15 +49,24 @@
     #choices([发送方], [路由器], [交换机], [接收方])
 ]
 #question[
+    LAN下链路层使用#paren[]识别硬件,传输层使用#paren[]识别不同的应用进程
+    #choices([IP地址], [MAC地址], [端口号], [子网掩码])
+]
+#question[
+    一个具有$20$台主机的LAN,并且呈现典型的突发(大部分时间空闲,少数时间同时发送),则适合使用#paren[]协议
+    #choices([时分复用], [Polling轮询], [CSMA], [频分复用])
+]
+#question[
+    当某网站因业务发展导致用户访问量激增，源站服务器面临巨大的处理压力和带宽瓶颈时，为了有效减轻源站负载、降低网络延迟并提高全球用户的访问响应速度，最适合采用的技术方案是#paren[]
+    #choices([采用轮询机制], [使用CSMA协议], [增大TCP窗口], [部署内容分发网络(CDN)])
+]
+= 填空
+#question[
     设$"rwnd"=5000 bytes$, $"cwnd"=8000 bytes$,$"RTT"=100 ms$,发送方的满载速率是#fillin[]
 ]
 #question[
     LAN下链路层使用#paren[]识别硬件,传输层使用#paren[]识别不同的应用进程
     #choices([IP地址], [MAC地址], [端口号], [子网掩码])
-]
-#question[
-    传统电话网络中使用#paren[]交换技术
-    #choices([电路], [软件], [分组], [硬件])
 ]
 #question[
     设网络总带宽为$30 Mbps$,一共$10$个用户
@@ -73,17 +82,9 @@
     主机地址$173.168.120.16 slash 27$,子网#fillin[]. 设ISP拥有地址块$128.119.40.192 slash 27$,将其划分为$4$个具有相同数量IP地址的子网,则他们分别为#fillin[],#fillin[],#fillin[],#fillin[]
 ]
 #question[
-    一个具有$20$台主机的LAN,并且呈现典型的突发(大部分时间空闲,少数时间同时发送),则适合使用#paren[]协议
-    #choices([时分复用], [Polling轮询], [CSMA], [频分复用])
-]
-#question[
     在EWMA中,设$"EstimatedRTT"=100ms,alpha=0.125$
     + $"sampleRTT"_1=120ms$则$"EstimatedRTT"_1$=#fillin[]
     + $"sampleRTT"_2=80ms$则$"EstimatedRTT"_2$=#fillin[]
-]
-#question[
-    当某网站因业务发展导致用户访问量激增，源站服务器面临巨大的处理压力和带宽瓶颈时，为了有效减轻源站负载、降低网络延迟并提高全球用户的访问响应速度，最适合采用的技术方案是#paren[]
-    #choices([采用轮询机制], [使用CSMA协议], [增大TCP窗口], [部署内容分发网络(CDN)])
 ]
 #question[
     ARP协议的作用是从#fillin[]地址得到#fillin[]地址
